@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+  <body>
+
+  <form>
+  Points: 0<input type="range" id="size" min="1" max="50">50
+  </form>
+
+  <canvas id="myCanvas" width="800" height="600"></canvas>
+  <script>
+  var input = document.getElementById('size');
+  input.onchange=function(){
+  console.log(input.value);
+
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+  var size = 40;
+
+  context.beginPath();
+  context.fillStyle = 'red';
+  context.fillRect(200, 200, 400, 400);
+  context.closePath();
+
+  context.beginPath();
+  context.fillStyle = 'white';
+  context.fillRect(230, 220, size, size);
+  context.fillRect(270, 220, size, size);
+  context.fillRect(310, 260, size, size);
+  context.fillRect(350, 220, size, size);
+  context.fillRect(390, 220, size, size);
+  context.fillRect(190, 260, size, size);
+  context.fillRect(190, 300, size, size);
+  context.fillRect(230, 340, size, size);
+  context.fillRect(270, 380, size, size);
+  context.fillRect(310, 420, size, size);
+  context.fillRect(350, 380, size, size);
+  context.fillRect(390, 340, size, size);
+  context.fillRect(430, 300, size, size);
+  context.fillRect(430, 260, size, size);
+
+
+
+  context.closePath();
+
+context.beginPath();
+
+context.font = 'bold 40px Georgia';
+context.fillStyle = 'white';
+context.fillText("Rails Girls", 300, 550);
+context.closePath();
+
+
+}
+/*
+  context.beginPath();
+  context.rect(400, 300, 200, 200);
+  context.fillStyle = 'red';
+  context.fill();
+  context.lineWidth = 7;
+  context.strokeStyle = 'red';
+  context.stroke();
+  */
+
+  </script>
+  </bod
+</html>
